@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assesment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+         :root {
+            --first: rgb(74, 118, 240);
+            /* --first: #0f0; */
+            --sec: white;
+        }
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 99.7%;
+            height: 99.4%;
+            scroll-behavior: smooth;
+            background-color: var(--sec);
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: none;
+        }
+        
+        img {
+            width: 60%;
+            /* min-height: 70%; */
+            margin-left: 20%;
+            border: solid 5px var(--first);
+            border-radius: 10%
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            border: solid var(--first) 5px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--first);
+            font-size: 1vw;
+        }
+        
+        .bottom {
+            width: 60%;
+            margin-left: 20%;
+            text-align: right;
+            font-style: italic;
+            color: var(--first);
+        }
+        
+        .top {
+            text-align: center;
+            font-size: 2vw;
+        }
+        
+        .metacontainer {
+            position: absolute;
+            border: solid;
+            width: 10%;
+            height: 10%;
+            background-color: white;
+            border-radius: 30%;
+            box-shadow: 7px 8px 3px 1px rgba(0, 102, 255, 0.4);
+            ;
+        }
+        
+        .metacontainer p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let array = [
+            [
+                ['pics/radioPita.jpg '],
+                ['Assessment December 2021 - Federico'],
+                ['homemade flat brad colored by Jacopo'],
+                ['sure<br>then<br>']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
+                ['left'],
+                ['right'],
+                ['keywords for you!1']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
+                ['left'],
+                ['right'],
+                ['keywords for you!2']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
+                ['left'],
+                ['right'],
+                ['keywords for you!3']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
+                ['left'],
+                ['right'],
+                ['keywords for you!4']
+            ],
+        ]
+        let n = 0
+        let b = 0
+
+        array.forEach(element => {
+            let r = Math.floor(Math.random() * 70) + 10;
+            let r2 = Math.floor(Math.random() * 70) + 10;
+            document.body.innerHTML += `
+                <a class="container" href="#${n+1}" id="${n}">
+                    <p class="top">${array[n][1]}</p>
+                    <img src="${array[n][0]}">
+                    <p class="bottom">${array[n][2]}</p>
+                </a>
+               `
+            document.getElementById(n).innerHTML += `<div class='metacontainer' style='top: ${r+b}%; left: ${r2}%;'><p>${array[n][3]}</p></div> `
+            n++
+            b = b + 100
+        });
+    </script>
+</body>
+
+</html>

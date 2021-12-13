@@ -27,11 +27,20 @@
         }
         
         img {
-            width: 60%;
-            /* min-height: 70%; */
-            margin-left: 20%;
-            border: solid 5px var(--first);
+            /* display: block; */
+            /* width: 60%; */
+            max-height: 80%;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 0.75rem var(--first));
+            /* height: auto; */
+            /* margin-left: 20%; */
+            /* border: solid 5px var(--first); */
             border-radius: 10%
+        }
+        
+        video {
+            filter: drop-shadow(0 0 0.75rem var(--first));
         }
         
         .container {
@@ -64,12 +73,9 @@
         .metacontainer {
             position: absolute;
             border: solid;
-            width: 10%;
-            height: 10%;
             background-color: white;
             border-radius: 30%;
             box-shadow: 7px 8px 3px 1px rgba(0, 102, 255, 0.4);
-            ;
         }
         
         .metacontainer p {
@@ -88,44 +94,128 @@
                 ['sure<br>then<br>']
             ],
             [
-                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
-                ['left'],
-                ['right'],
-                ['keywords for you!1']
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/e/e4/BeatoAngelicoAnnunciazione.jpg'],
+                ['Transmutation of Informations'],
+                ['Data packages in form of the holy spirit (or viceversa)'],
+                ['<br>']
             ],
             [
-                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
-                ['left'],
-                ['right'],
-                ['keywords for you!2']
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/7/78/Ssh.mp4'],
+                ['Floating Protocols'],
+                ['with Martin in Den Haag uploading the hotspot interface'],
+                ['SSH<br>termux<br>wlan'],
             ],
             [
-                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
-                ['left'],
-                ['right'],
-                ['keywords for you!3']
-            ],
-            [
-                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
+                ['pics/deriveNetwork.png'],
                 ['left'],
                 ['right'],
                 ['keywords for you!4']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/2/2a/Rpi_in_spinoza.jpg'],
+                ['Hide the artifact'],
+                ['Hotspot in <i>Spinoza Garden</i>'],
+                ['Infrastructure<br>Container<br>web Architecture']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/4/40/Beacon-Pub.png'],
+                ['<i>Just</i> Beacons'],
+                ['fluo pubblications as beacons'],
+                ['Paper<br>Signaler<br>Trigger<br>Urbanism']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/7/72/Spiega_connections.png'],
+                ['Pigeons > *'],
+                ['Cooo cooo...'],
+                ['Paper<br>Signaler<br>Trigger<br>']
+            ],
+
+
+
+
+
+
+
+
+
+
+            [
+                ['https://s3.amazonaws.com/gs-geo-images/f36ac6cc-990e-4ab1-addc-c3f30cec9335.png'],
+                [''],
+                ['Optical Telegrapher of Le Chappe'],
+                ['Beacons<br>Signaler<br>Protocol<br>Napoleon<br>Pigeons']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/8/80/Cosmology_chart.jpg'],
+                [''],
+                ['Aura of wireless, what?'],
+                ['arrows<br>arrows<br>arrows<br>other arrows']
+            ],
+
+
+
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/f/fb/Smoke-signals.jpg'],
+                ['Meanings'],
+                ['Thinking about broadcast vs p2p, the protocols change'],
+                ['broadcast<br>mystical<br>protocols']
+            ],
+            [
+                ['https://www.cosmic-core.org/wp-content/uploads/2018/10/cateyenebula-lr-300x300.jpg'],
+                ['Aether...'],
+                ['an avarage representation of the ether even if the filename is something about a nebula'],
+                ['Fields<br>Signals<br>Waves<br>']
+            ],
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/7/7a/Wordsflyaround.jpg'],
+                ['<i>Words fly around</i>'],
+                ['Poems in form of Beacon Attack'],
+                ['Paper<br>Signaler<br>Trigger<br>']
+            ],
+
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/e/e3/Deeng_gif.gif'],
+                ['DING'],
+                [''],
+                ['Presence<br>Bell<br>WiFi<br>hotspot<br>Sandbot']
+            ],
+
+
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/7/72/Spiega_connections.png'],
+                ['Pigeons > *'],
+                ['Cooo cooo...'],
+                ['Paper<br>Signaler<br>Trigger<br>']
             ],
         ]
         let n = 0
         let b = 0
 
         array.forEach(element => {
-            let r = Math.floor(Math.random() * 70) + 10;
-            let r2 = Math.floor(Math.random() * 70) + 10;
+            let media = ''
+            let fileExt = new String(array[n][0])
+            let result = fileExt.endsWith('.mp4')
+            console.log(result)
+            if (fileExt.endsWith('.mp4')) {
+                media = `<video autoplay muted loop>
+                            <source src="${array[n][0]}" type="video/mp4">
+                         </video>`
+            } else {
+                media = `<img src="${array[n][0]}">`
+            }
+
             document.body.innerHTML += `
                 <a class="container" href="#${n+1}" id="${n}">
                     <p class="top">${array[n][1]}</p>
-                    <img src="${array[n][0]}">
+                    ${media}
                     <p class="bottom">${array[n][2]}</p>
                 </a>
                `
-            document.getElementById(n).innerHTML += `<div class='metacontainer' style='top: ${r+b}%; left: ${r2}%;'><p>${array[n][3]}</p></div> `
+            let r = Math.floor(Math.random() * 70) + 10;
+            let r2 = Math.floor(Math.random() * 70) + 10;
+            let rw = Math.floor(Math.random() * 6) + 4;
+            document.getElementById(n).innerHTML += `<div class='metacontainer' style='top: ${r+b}%; left: ${r2}%; width: ${rw}%; height: auto'><p>${array[n][3]}</p></div> `
+
             n++
             b = b + 100
         });

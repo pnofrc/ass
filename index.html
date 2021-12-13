@@ -82,11 +82,31 @@
         .metacontainer p {
             text-align: center;
         }
+        
+        #restart button {
+            position: fixed;
+            top: 2%;
+            left: 2%;
+            width: 5%;
+            height: 3%;
+            border: solid 2px var(--first);
+            border-radius: 25%;
+        }
     </style>
 </head>
 
 <body>
+
+    <a id='restart' href="./" onclick="window.reload"><button></button></a>
     <script>
+        var Key = {
+            LEFT: 37,
+            UP: 38,
+            RIGHT: 39,
+            DOWN: 40
+        };
+
+
         let array = [
             [
                 ['pics/radioPita.jpg '],
@@ -254,6 +274,42 @@
             n++
             b = b + 100
         });
+
+        function _addEventListener(evt, element, fn) {
+            if (window.addEventListener) {
+                element.addEventListener(evt, fn, false);
+            } else {
+                element.attachEvent('on' + evt, fn);
+            }
+        }
+
+        function handleKeyboardEvent(evt) {
+            if (!evt) {
+                evt = window.event;
+            } // for old IE compatible
+            var keycode = evt.keyCode || evt.which; // also for cross-browser compatible
+            switch (keycode) {
+                case Key.LEFT:
+                    window.history.go(-1)
+                    break;
+
+                case Key.RIGHT:
+                    let page = window.location.href.slice(-2)
+                    if (page.includes('#')) {
+                        page = page.slice(-1)
+                        console.log(parseInt(page))
+                        document.getElementById(page).click()
+                    } else {
+                        document.getElementById(page).click()
+                    }
+
+
+                    break;
+
+            }
+        }
+
+        _addEventListener('keydown', document, handleKeyboardEvent);
     </script>
 </body>
 

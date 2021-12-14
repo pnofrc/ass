@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Assesment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <style>
          :root {
-            --first: rgb(74, 118, 240);
+            --first: rgb(63, 141, 47);
             /* --first: #0f0; */
-            --sec: white;
+            --sec: rgba(247, 233, 207, 0.63);
         }
         
         body,
@@ -24,13 +25,14 @@
             background-color: var(--sec);
             font-family: Arial, Helvetica, sans-serif;
             overflow-x: none;
+            /* background-color: var(--sec); */
         }
         
         img,
         video {
             /* display: block; */
             /* width: 60%; */
-            max-height: 80%;
+            height: 80%;
             width: auto;
             object-fit: contain;
             filter: drop-shadow(0 0 0.75rem var(--first));
@@ -74,9 +76,9 @@
         .metacontainer {
             position: absolute;
             border: solid;
-            background-color: white;
-            border-radius: 30%;
-            box-shadow: 7px 8px 3px 1px rgba(0, 102, 255, 0.4);
+            background-color: var(--sec);
+            /* border-radius: 4%; */
+            filter: drop-shadow(0 0 0.75rem var(--first));
         }
         
         .metacontainer p {
@@ -90,7 +92,7 @@
             width: 5%;
             height: 3%;
             border: solid 2px var(--first);
-            border-radius: 25%;
+            /* border-radius: 25%; */
         }
     </style>
 </head>
@@ -111,15 +113,10 @@
             [
                 ['pics/radioPita.jpg '],
                 ['Assessment December 2021 - Federico'],
-                ['homemade flat brad colored by Jacopo'],
-                ['sure<br>then<br>']
+                ['homemade flat bread colored by Jacopo'],
+                ['Goodafternoon<br><br>:)']
             ],
-            [
-                ['https://pzwiki.wdka.nl/mw-mediadesign/images/e/e4/BeatoAngelicoAnnunciazione.jpg'],
-                ['Transmutation of Informations'],
-                ['Data packages in form of the holy spirit (or viceversa)'],
-                ['<br>']
-            ],
+
             [
                 ['https://pzwiki.wdka.nl/mw-mediadesign/images/7/78/Ssh.mp4'],
                 ['Floating Protocols'],
@@ -128,9 +125,9 @@
             ],
             [
                 ['pics/deriveNetwork.png'],
-                ['left'],
-                ['right'],
-                ['keywords for you!4']
+                ['What happened (or at least what I thought it was going to happen) with the access points'],
+                ['I like schemes'],
+                ['Situations<br>Dwelling<br>Interaction<br>Urbanism']
             ],
             [
                 ['https://pzwiki.wdka.nl/mw-mediadesign/images/2/2a/Rpi_in_spinoza.jpg'],
@@ -174,18 +171,30 @@
             ],
 
 
-
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/e/e4/BeatoAngelicoAnnunciazione.jpg'],
+                ['Transmutation of Informations'],
+                ['Data packages in form of the holy spirit (or viceversa)'],
+                ['Sacrality<br>ray or wave?<br>there is a lil pigeon! <br>(no ok is a dove) ']
+            ],
             [
                 ['https://pzwiki.wdka.nl/mw-mediadesign/images/f/fb/Smoke-signals.jpg'],
                 ['Meanings'],
                 ['Thinking about broadcast vs p2p, the protocols change'],
-                ['broadcast<br>mystical<br>protocols']
+                ['broadcast<br>mystical<br>protocols<br>forcing connections<br><b>not interested in "truth" booleans</b>']
             ],
             [
-                ['https://www.cosmic-core.org/wp-content/uploads/2018/10/cateyenebula-lr-300x300.jpg'],
+                ['pics/cateyenebula-lr-300x300.jpg'],
                 ['Aether...'],
                 ['an avarage representation of the ether even if the filename is something about a nebula'],
                 ['Fields<br>Signals<br>Waves<br>']
+            ],
+
+            [
+                [''],
+                [''],
+                [''],
+                ['Prototypes...']
             ],
             [
                 ['https://pzwiki.wdka.nl/mw-mediadesign/images/7/7a/Wordsflyaround.jpg'],
@@ -214,7 +223,7 @@
                 ['LARP<br>ether<br>The Device<br>0.30<br>0.40']
             ],
             [
-                [''],
+                ['pics/device.png'],
                 ['The Device'],
                 [''],
                 ['Compass as Gyroscope + GPS<br>AudioArchive in the ether<br>gyroscope movement language<br>BLE<br>Gestures']
@@ -222,27 +231,123 @@
 
             [
                 ['pics/wip.jpg'],
-                [''],
-                [''],
-                ['<br>']
+                ['Work in Prog @ Overkill Festival'],
+                ['Wow! I didnt cut myself cutting the wood!'],
+                ['Rpi<br>Ultra sound sensor<br>Bell<br>WiFi Module<br>Local Network']
             ],
             [
                 ['pics/aether.jpg'],
                 ['Aether Drawing'],
-                ['Ghost Satellite signals hunting with Alumni Matthias'],
-                ['Satelliti<br>Waves']
+                ['Ghost Satellite signals hunting with Alumni Matthias Hurtl'],
+                ['Satelliti<br>Waves<br>DIWO<br>homemade antenna<br>Satellite Pirates<br>Solar Power']
+            ],
+            [
+                [''],
+                [''],
+                ['Ok What happened this summer?'],
+                ['Habitat!']
             ],
 
             [
-                ['pics/pitaCotta.jpg'],
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/c/c4/Habitat_team.jpg'],
+                ['Gang'],
                 [''],
-                [''],
-                ['<br>']
+                ['']
             ],
+
+            [
+                ['pics/antenna.jpg'],
+                ['Antenna at the top'],
+                [''],
+                ['ecomonster<br>But we are OK with monsters']
+            ],
+            [
+                ['pics/bonusAnna.jpg'],
+                ['Bonus: Anna'],
+                ['Bonus: Anna'],
+                ['Bonus:<br>Anna']
+            ],
+
+            [
+                ['https://pzwiki.wdka.nl/mw-mediadesign/images/e/ea/Anti_Ideas_Garden.jpg'],
+                ['Building Stuff'],
+                ['Garden of Anti ideas'],
+                ['Stop with ideas!']
+            ],
+            [
+                ['pics/garden.jpg'],
+                ['Printing Stuff'],
+                [''],
+                ['We will do a T.A.Z. ...']
+            ],
+            [
+                ['pics/serverino.jpg'],
+                ['Our (previous)(little) Server'],
+                [''],
+                ['Another Raspberry yea<br>Another Local Network Yea']
+            ],
+            [
+                ['pics/portf.jpg'],
+                ['Collective Portfolio'],
+                [''],
+                ['self-management<br>Portfolio Building<br>WiFi!<br>Paged.js<br>PHP']
+            ],
+
+
+
+
+            [
+                ['pics/habitatWeb.png'],
+                ['HABITAT <3'],
+                ['The website we have to rebuild'],
+                ['Basic Website<br>Need archive']
+            ],
+
+            [
+                ['pics/server.jpg'],
+                ['Our not-yet server'],
+                ['The machine which will hosts the digital side of Habitat'],
+                ['Very very Excited<br>Truly truly Grateful']
+            ],
+
+            [
+                ['pics/dough.jpg'],
+                ['A list of stuff we are gonna do'],
+                ['(in NY eve)'],
+                ['Set Up Server<br>[debian+nginx]<br><br>mediawiki<br><br>etherpad<br><br>Suite for accounting etc<br><br>"Living receipt printer in a dead window"<br><br>Antenna building<br><br><b>UTFS</b>']
+            ],
+
+            [
+                ['pics/making.jpg'],
+                ['A list of stuff we would like to do'],
+                ['(after NY)'],
+                ['Solar power server<br><br>Put and automize wheels on the antenna<br><br>Radio Beacon<br><br>AM transmissions with neighboorhood']
+            ],
+            [
+                ['pics/gomma.jpg'],
+                ['A list of possibilities we want to test out'],
+                ['To create the archive:          Radio broadcasts     etherpad2HTML    Scanner+Tesseract'],
+                ['Tool for memories collecting<br><br>Public Space as playground and exhibition space<br><br>Wave spectrum as playground and exhibition space<br><br>Questioning how to build local archive<br><br>Archiving as documentation and present/future building<br><br>What to digitalize or better, what to publish in the internet and what no<br><br>Obsolete media as poetic community-building tools<br><br>']
+            ],
+            [
+                ['pics/bonusbonus.jpg'],
+                ['FREEDOM IS (COLLECTIVE) PARTICIPATION'],
+                ['Jacopo in his habitat'],
+                ['An edited quote from Giorgio Gaber']
+            ],
+            [
+                ['pics/pitaCotta.jpg'],
+                ['Thanks (or Sorry) for your attention'],
+                ['The flat bread is ready'],
+                ['    THANKS   ']
+            ],
+
 
 
 
         ]
+
+
         let n = 0
         let b = 0
 
@@ -268,8 +373,8 @@
                `
             let r = Math.floor(Math.random() * 70) + 10;
             let r2 = Math.floor(Math.random() * 70) + 10;
-            let rw = Math.floor(Math.random() * 6) + 4;
-            document.getElementById(n).innerHTML += `<div class='metacontainer' style='top: ${r+b}%; left: ${r2}%; width: ${rw}%; height: auto'><p>${array[n][3]}</p></div> `
+            let rw = Math.floor(Math.random() * 12) + 7;
+            document.getElementById(n).innerHTML += `<div class='metacontainer draggable' style='top: ${r+b}%; left: ${r2}%; width: ${rw}%; height: auto'><p>${array[n][3]}</p></div> `
 
             n++
             b = b + 100
@@ -310,6 +415,49 @@
         }
 
         _addEventListener('keydown', document, handleKeyboardEvent);
+
+
+
+
+
+        // target elements with the "draggable" class
+        interact('.draggable')
+            .draggable({
+                // enable inertial throwing
+                inertia: true,
+                // keep the element within the area of it's parent
+                modifiers: [
+                    interact.modifiers.restrictRect({
+                        restriction: 'parent',
+                        endOnly: true
+                    })
+                ],
+
+                listeners: {
+                    // call this function on every dragmove event
+                    move: dragMoveListener,
+
+                    // call this function on every dragend event
+
+                }
+            })
+
+        function dragMoveListener(event) {
+            var target = event.target
+                // keep the dragged position in the data-x/data-y attributes
+            var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+            var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+            // translate the element
+            target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+            // update the posiion attributes
+            target.setAttribute('data-x', x)
+            target.setAttribute('data-y', y)
+        }
+
+        // this function is used later in the resizing and gesture demos
+        window.dragMoveListener = dragMoveListener
     </script>
 </body>
 
